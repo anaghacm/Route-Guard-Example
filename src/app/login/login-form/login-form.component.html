@@ -1,0 +1,18 @@
+<div class="form-div">
+    <p class="form-heading">Login your account</p>
+    <form [formGroup]="loginForm" (ngSubmit)="submitData()">
+        <div class="input-div">
+            <input class="form-control" type="text" name="username" formControlName="username" placeholder="Username">
+        </div>
+        <div class="input-div password-div">
+            <input class="form-control" [type]="showPassword?'text':'password'" name="password" formControlName="password" placeholder="Password">
+            <i class="fa-regular icon-password" [ngClass]="showPassword?'fa-eye':'fa-eye-slash'" (click)="passwordVisibility()"></i>
+        </div>
+        <div class="btn-div">
+            <button class="btn btn-login">Login <i class="fa-solid fa-unlock-keyhole btn-icon"></i></button>
+        </div>
+    </form>
+    <div class="email">
+        <p>anaghaprajeesh2011@gmail.com</p>
+    </div>
+</div>
